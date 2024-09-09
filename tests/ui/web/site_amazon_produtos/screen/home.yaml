@@ -1,0 +1,68 @@
+#Exemplo para Mobile
+
+# txt_name_plant:
+#   android: 
+#     selector: id=
+#     value: plant_detail_name
+#   ios:
+#     selector: 
+#     value: 
+
+
+# ${URL}                    https://www.amazon.com.br/
+# ${MENU_ELETRONICO}        xpath=//a[@href='/Eletronicos-e-Tecnologia/b/?ie=UTF8&node=16209062011&ref_=nav_cs_electronics'][contains(.,'Eletrônicos')]
+# ${TITULO_PAGINA}          xpath=//title[contains(.,'Eletrônicos e Tecnologia | Amazon.com.br')]
+# ${EDITEXT}                xpath=//input[contains(@type,'text')]
+# ${BTN_PESQUISAR}          id= nav-search-submit-button
+# ${TITLE_PESQUISA}         Amazon.com.br : Xbox Series S
+# ${BTN_PRODUTO}            xpath=//img[@data-image-index='3']
+# ${SUB_TITLE}              Eletrônicos e Tecnologia
+# ${TEXT_TITLE}             Eletrônicos e Tecnologia | Amazon.com.br
+
+# ============ WEB HOME ================
+
+MENU_ELETRONICO:
+  web: 
+    selector: xpath=
+    value: //a[@href='/Eletronicos-e-Tecnologia/b/?ie=UTF8&node=16209062011&ref_=nav_cs_electronics'][contains(.,'Eletrônicos')]
+
+TITULO_PAGINA:
+  web: 
+    selector: xpath=
+    value: //h1[contains(.,'Eletrônicos e Tecnologia')]
+
+BTN_PESQUISAR:
+  web: 
+    selector: id=
+    value: nav-search-submit-button
+    
+
+          
+
+text_sub_title:
+  web: 
+    selector: xpath=
+    value: //title[contains(.,'Eletrônicos e Tecnologia | Amazon.com.br')]
+
+
+EDITEXT:
+  web: 
+    selector: xpath=
+    value: //input[contains(@type,'text')]
+
+BTN_PESQUISAR:
+  web: 
+    selector: id=
+    value: nav-search-submit-button
+
+
+TITLE_PESQUISA:
+  web: 
+    selector: xpath=
+    value: //a[@href='/Eletronicos-e-Tecnologia/b/?ie=UTF8&node=16209062011&ref_=nav_cs_electronics'][contains(.,'Eletrônicos')]
+
+BTN_PRODUTO:
+  web: 
+    selector: xpath=
+    value: //img[@data-image-index='3']
+

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0.1 (Python 3.12.4 on darwin)" generated="2024-08-24T02:15:08.039117" rpa="false" schemaversion="5">
+<suite id="s1" name="amazon testeBDD" source="/Users/jeffalves/robotFrameworkWeb/amazon_testeBDD.robot">
+<test id="s1-t1" name="Scenario: Caso de teste 02 - Pesquisa de um produto" line="32">
+<kw name="Abrir e maximizar navegador" owner="amazon_resources" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-08-24T02:15:08.211625" level="INFO">Opening browser ' firefox' to base url 'None'.</msg>
+<arg>browser= ${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-08-24T02:15:08.211377" elapsed="4.730456"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-08-24T02:15:14.943385" level="INFO">Slept 2 seconds.</msg>
+<arg>time_= 2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-08-24T02:15:12.942513" elapsed="2.001068"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-08-24T02:15:14.943951" elapsed="0.456194"/>
+</kw>
+<status status="PASS" start="2024-08-24T02:15:08.210677" elapsed="7.189722"/>
+</kw>
+<kw name="Given estou na home page da Amazon.com.br" owner="amazon_resources">
+<kw name="Acessar a home page amazon.com.br" owner="amazon_resources">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-08-24T02:15:15.402556" level="INFO">Opening url ' https://www.amazon.com.br/'</msg>
+<arg>url= ${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-08-24T02:15:15.402296" elapsed="2.186304"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${MENU_ELETRONICO}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-24T02:15:17.588973" elapsed="0.119287"/>
+</kw>
+<status status="PASS" start="2024-08-24T02:15:15.401916" elapsed="2.306534"/>
+</kw>
+<status status="PASS" start="2024-08-24T02:15:15.401272" elapsed="2.307381"/>
+</kw>
+<kw name="When pesquisar pelo produto &quot;Xbox Series S&quot;" owner="amazon_resources" source_name="pesquisar pelo produto &quot;${DADO_PESQUISA}&quot;">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-24T02:15:17.711762" level="INFO">Clicking element 'xpath=//input[contains(@type,'text')]'.</msg>
+<arg>${EDITEXT}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-24T02:15:17.711518" elapsed="0.419984"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-24T02:15:18.131982" level="INFO">Typing text 'Xbox Series S' into text field 'xpath=//input[contains(@type,'text')]'.</msg>
+<arg>${EDITEXT}</arg>
+<arg>${DADO_PESQUISA}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-24T02:15:18.131692" elapsed="0.084421"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-24T02:15:18.216736" level="INFO">Clicking element 'id= nav-search-submit-button'.</msg>
+<arg>${BTN_PESQUISAR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-24T02:15:18.216410" elapsed="1.291002"/>
+</kw>
+<status status="PASS" start="2024-08-24T02:15:17.711127" elapsed="1.796491"/>
+</kw>
+<kw name="Then o título da página deve ficar &quot;Amazon.com.br : Xbox Series S&quot;" owner="amazon_resources">
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2024-08-24T02:15:19.511496" level="INFO">Page title is 'Amazon.com.br : Xbox Series S'.</msg>
+<arg>title=${TITLE_PESQUISA}</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2024-08-24T02:15:19.508680" elapsed="0.002928"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>text=${TITLE_PESQUISA}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-08-24T02:15:19.511841" elapsed="0.046155"/>
+</kw>
+<status status="PASS" start="2024-08-24T02:15:19.508249" elapsed="0.049917"/>
+</kw>
+<kw name="And um produto da linha &quot;Xbox Series S&quot; deve ser mostrado na página" owner="amazon_resources">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>locator=${BTN_PRODUTO}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-24T02:15:19.558981" elapsed="0.099641"/>
+</kw>
+<status status="PASS" start="2024-08-24T02:15:19.558669" elapsed="0.100118"/>
+</kw>
+<kw name="Fechar navegador" owner="amazon_resources" type="TEARDOWN">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-08-24T02:15:20.254127" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-08-24T02:15:19.659754" elapsed="0.594513"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-08-24T02:15:20.254778" elapsed="1.026246"/>
+</kw>
+<status status="PASS" start="2024-08-24T02:15:19.659295" elapsed="1.621967"/>
+</kw>
+<doc>Esses testes verificar a busca de um produto</doc>
+<tag>busca_produtos</tag>
+<status status="PASS" start="2024-08-24T02:15:08.209942" elapsed="13.071506"/>
+</test>
+<doc>Esses suite  traz configuracoes  iniciais dos testes</doc>
+<status status="PASS" start="2024-08-24T02:15:08.040411" elapsed="13.242029"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">busca_produtos</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="amazon testeBDD">amazon testeBDD</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

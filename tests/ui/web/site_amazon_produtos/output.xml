@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0.1 (Python 3.12.4 on darwin)" generated="2024-09-09T00:41:27.574180" rpa="false" schemaversion="5">
+<suite id="s1" name="amazon testeBDD" source="/Users/jeffalves/robotFrameworkWeb/tests/ui/web/site_amazon_produtos/amazon_testeBDD.robot">
+<kw name="Carregar ScreenObject" owner="base" type="SETUP">
+<kw name="Get Screen Object">
+<msg time="2024-09-09T00:41:27.878172" level="FAIL">No keyword with name 'Get Screen Object' found.</msg>
+<var>${home_screen}</var>
+<arg>screen=home</arg>
+<status status="FAIL" start="2024-09-09T00:41:27.878075" elapsed="0.000163">No keyword with name 'Get Screen Object' found.</status>
+</kw>
+<kw name="Set Suite Variable" owner="BuiltIn">
+<arg>${home_screen}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<status status="NOT RUN" start="2024-09-09T00:41:27.878488" elapsed="0.000037"/>
+</kw>
+<status status="FAIL" start="2024-09-09T00:41:27.874955" elapsed="0.003713">No keyword with name 'Get Screen Object' found.</status>
+</kw>
+<test id="s1-t1" name="Scenario: caso de teste 01 - Acesso ao menu &quot;Eletronico" line="15">
+<doc>Esses testes verificar o menu eletronico do site amazon.com.br
+e verifica categoria computadores informatica.
+  Lista Opcoes Menu: pelo @data-csa-c-content-id
+  nav_cs_electronics  = eletronicos
+  nav_cs_books = livros
+  nav_cs_music = Musica
+  nav_cs_primelink_nonmember = prime
+  nav_cs_bestsellers = mais vendidos</doc>
+<tag>@menus</tag>
+<status status="FAIL" start="2024-09-09T00:41:27.878804" elapsed="0.001627">Parent suite setup failed:
+No keyword with name 'Get Screen Object' found.</status>
+</test>
+<test id="s1-t2" name="Scenario: Caso de teste 02 - Pesquisa de um produto" line="35">
+<doc>Esses testes verificar a busca de um produto</doc>
+<tag>@busca_produtos</tag>
+<status status="FAIL" start="2024-09-09T00:41:27.881099" elapsed="0.000491">Parent suite setup failed:
+No keyword with name 'Get Screen Object' found.</status>
+</test>
+<doc>Esses suite  traz configuracoes  iniciais dos testes</doc>
+<status status="FAIL" start="2024-09-09T00:41:27.577179" elapsed="0.305303">Suite setup failed:
+No keyword with name 'Get Screen Object' found.</status>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="2" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">@busca_produtos</stat>
+<stat pass="0" fail="1" skip="0">@menus</stat>
+</tag>
+<suite>
+<stat pass="0" fail="2" skip="0" id="s1" name="amazon testeBDD">amazon testeBDD</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2024-09-09T00:41:27.870996" level="ERROR">Error in file '/Users/jeffalves/robotFrameworkWeb/tests/ui/web/site_amazon_produtos/base.robot' on line 3: Library '../lib/helperScreenObject.py' does not exist.</msg>
+</errors>
+</robot>
