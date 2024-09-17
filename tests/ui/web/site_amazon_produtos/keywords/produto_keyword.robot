@@ -43,7 +43,8 @@ a categoria "Computadores e Informática" deve ser exibida na página
     Verificar se aparece a categoria "Tablets"
 
 
-pesquisar pelo produto "${DADO_PESQUISA}"
+pesquisar pelo "${produtos}"
+# {DADO_PESQUISA}
     Click Element     ${home.EDITEXT} 
     Input Text        ${home.EDITEXT}    ${DADO_PESQUISA}
     Click Element     ${home.BTN_PESQUISAR}
